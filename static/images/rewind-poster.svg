@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-labelledby="rewindPosterTitle rewindPosterDesc">
+  <title id="rewindPosterTitle">REWIND project poster placeholder</title>
+  <desc id="rewindPosterDesc">Placeholder graphic for the REWIND immersive AR surgical training project. Replace with an exported image from POSTER.pdf if desired.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a365d"/>
+      <stop offset="100%" style="stop-color:#2c5282"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="600" y="220" text-anchor="middle" fill="#f7fafc" font-family="system-ui,Segoe UI,sans-serif" font-size="56" font-weight="700">REWIND</text>
+  <text x="600" y="290" text-anchor="middle" fill="#cbd5e0" font-family="system-ui,Segoe UI,sans-serif" font-size="28">An Immersive AR Surgical Training Tool</text>
+  <text x="600" y="360" text-anchor="middle" fill="#a0aec0" font-family="system-ui,Segoe UI,sans-serif" font-size="20">Vanderbilt University · BME Senior Design</text>
+  <text x="600" y="480" text-anchor="middle" fill="#718096" font-family="system-ui,Segoe UI,sans-serif" font-size="18">Placeholder  swap for exported poster artwork</text>
+</svg>

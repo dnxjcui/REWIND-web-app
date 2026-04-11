@@ -1,43 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+        content="REWIND: an immersive AR surgical training tool combining ROS-based haptic feedback, joint-angle sensing, and Unity AR rendering for repeatable, feedback-rich practice.">
+  <meta name="keywords" content="REWIND, augmented reality, surgical training, haptics, ROS, Vanderbilt, BME Senior Design">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'G-PYVRSFMDRL');
-  </script>
+  <title>REWIND: An Immersive AR Surgical Training Tool</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/favicon.svg">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
 </head>
 <body>
@@ -52,33 +32,11 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
-      </div>
+      <a class="navbar-item" href="#abstract">Abstract</a>
+      <a class="navbar-item" href="#system">System</a>
+      <a class="navbar-item" href="#next-steps">Next steps</a>
+      <a class="navbar-item" href="#references">References</a>
     </div>
-
   </div>
 </nav>
 
@@ -88,84 +46,46 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
+          <h1 class="title is-1 publication-title">REWIND: An Immersive AR Surgical Training Tool</h1>
           <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
-            <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
-            </span>
+            <span class="author-block">Victor Dunagan<sup>1,2</sup>,</span>
+            <span class="author-block">Nathan Hammond<sup>1,2</sup>,</span>
+            <span class="author-block">Nick Cui<sup>1</sup>,</span>
+            <span class="author-block">Audrey Hardtke<sup>1</sup>,</span>
+            <span class="author-block">Aaron Falconer<sup>1,2</sup></span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+            <span class="author-block"><sup>1</sup>Department of Biomedical Engineering, Vanderbilt University, Nashville, TN</span>
           </div>
+          <div class="is-size-6 publication-authors" style="margin-top: 0.25rem;">
+            <span class="author-block"><sup>2</sup>Department of Electrical Engineering, Vanderbilt University, Nashville, TN</span>
+          </div>
+
+          <p class="is-size-6 has-text-grey-dark" style="margin-top: 1rem;">
+            BME Senior Design · Mentors: Professor Goldfarb, Professor Jie Ying Wu
+          </p>
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
+                <a href="./POSTER.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
-                  <span>Paper</span>
+                  <span>Poster</span>
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
+                <a href="./Project%20Proposal.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <i class="ai ai-arxiv"></i>
+                      <i class="fas fa-file-alt"></i>
                   </span>
-                  <span>arXiv</span>
+                  <span>Proposal</span>
                 </a>
               </span>
-              <!-- Video Link. -->
-              <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href="https://github.com/google/nerfies"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                  </a>
-              </span>
-              <!-- Dataset Link. -->
-              <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a>
             </div>
 
           </div>
@@ -178,278 +98,155 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
+      <img id="teaser"
+           class="rewind-teaser-img"
+           src="./static/images/rewind-poster.svg"
+           width="1200"
+           height="630"
+           alt="REWIND project poster placeholder. Export POSTER.pdf to PNG and replace this file for a sharper hero image.">
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
+        Closed-loop AR and haptic feedback for repeatable, immersive surgical skill practice.
+        <span class="is-block is-size-6 has-text-grey mt-2">Hero image is a placeholder; replace <code>static/images/rewind-poster.svg</code> with your exported poster if you prefer.</span>
       </h2>
     </div>
   </div>
 </section>
 
 
-<section class="hero is-light is-small">
+<section class="hero is-light is-small" aria-label="Demo media placeholder">
   <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
+    <div class="container is-max-desktop">
+      <div class="box rewind-demo-placeholder has-text-centered px-4 py-5">
+        <figure class="image rewind-carousel-figure">
+          <img src="./static/images/rewind-poster.svg"
+               alt=""
+               width="1200"
+               height="630">
+        </figure>
+        <p class="is-size-5 mt-4 has-text-weight-medium">Demo videos coming soon.</p>
       </div>
     </div>
   </div>
 </section>
 
 
-<section class="section">
+<section class="section" id="abstract">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            Current AR training tools often lack accurate haptic feedback and repeatability, which limits skill development and can prolong surgical training time. Simulation reinforced with haptic feedback has been shown to help surgeons improve performance and tissue repair quality. REWIND targets a closed-loop system that combines wearable sensing, a ROS-based middleware layer, and Unity AR rendering so trainees can practice procedures with immersive visuals and timely haptic cues.
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            The design links a sensorized glove to an AR application through a ROS graph: joint angles from absolute magnetic encoders are published as standard <code>JointState</code> data, while interaction events in the scene are mapped to compact haptic commands that drive vibrotactile or force actuators. A complementary computer-vision pipeline aims to produce per-frame 3D hand and tool estimates for replay, correction, and analysis. Together, these pieces support low-latency sensing-to-render and AR-event-to-haptic paths, with modular interfaces that can scale to more fingers, sensors, or compute nodes.
           </p>
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
-
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-    <!--/ Paper video. -->
   </div>
 </section>
 
 
-<section class="section">
+<section class="section" id="motivation">
   <div class="container is-max-desktop">
-
     <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
+      <div class="column is-four-fifths content has-text-justified">
+        <h2 class="title is-3 has-text-centered">Motivation</h2>
+        <p>
+          Surgical training still relies heavily on cadaver labs and learning in the operating room—approaches that are expensive, difficult to repeat, and do not always transfer cleanly to real OR performance. AR and VR simulation offer safer, repeatable alternatives, especially for minimally invasive techniques, but many AR simulators struggle with compliant soft-tissue behavior and convincing force interaction in real time. Haptic feedback is a key lever for immersivity and longer skill retention.
+        </p>
       </div>
     </div>
-    <!--/ Matting. -->
-
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
-        <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
-        </div>
-        <br/>
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
-
-      </div>
-    </div>
-    <!--/ Animation. -->
-
-
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Concurrent Work. -->
-
   </div>
 </section>
 
 
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
-}</code></pre>
+<section class="section has-background-light" id="system">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths content has-text-justified">
+        <h2 class="title is-3 has-text-centered">System overview</h2>
+        <p>
+          The system connects the glove to an AR runtime through ROS. Each finger joint is measured by AS5600 absolute magnetic encoders feeding a glove microcontroller. The MCU runs a lightweight ROS client, performs zeroing and optional filtering, and publishes joint angles. A host computer runs ROS middleware and a bridge to the AR application in Unity. The AR experience subscribes to joint angles for visualization and interaction logic; events in the scene return through ROS to the glove, where a mapper converts them into haptic commands for the actuators. Typical physical links include USB, UART, CAN, or Wi‑Fi to the ROS agent, with ROS&nbsp;2 DDS on the host.
+        </p>
+
+        <h3 class="title is-4 mt-5">Unity scene and simulation</h3>
+        <p>
+          The Unity scene connects real-time instrument tracking with a physics-based suturing simulation. A vision pipeline can stream six-DoF instrument poses into Unity to drive a virtual needle, enabling markerless tracking that couples real motion to the simulated tool. A state machine governs needle insertion while physics constraints approximate tissue deformation, suture pull-through, and wound closure—yielding a closed loop where real-world motion produces physically grounded AR surgical behavior.
+        </p>
+
+        <h3 class="title is-4 mt-5">Computer vision and 3D reconstruction</h3>
+        <p>
+          We target a preprocessing-oriented pipeline that merges dynamic 3D video reconstruction with landmark detection to recover per-frame joint coordinates for wrists, fingers, and instruments—outputs intended for AR/VR replay and mechanical glove correction. The pipeline estimates camera trajectory and coarse geometry, localizes hands and infers 3D landmarks or a parametric hand model, lifts estimates into a global frame with temporal filtering and kinematic constraints, and exports joint coordinates, angles, confidence flags, and tool trajectories. Binocular capture is preferred for depth quality where feasible, with room to adopt specialized hand trackers (e.g., Dyn-HaMR-class methods) or broader scene reconstruction models as requirements firm up.
+        </p>
+
+        <h3 class="title is-4 mt-5">AR module</h3>
+        <p>
+          Using Microsoft HoloLens&nbsp;2, the AR module estimates poses of surgical instruments and the tendon-controlled hand, organizes tool motion, finger articulation, and combined trajectories into synchronized streams, and exposes them for analysis, feedback, and logging. The module is designed for modularity: trajectory data can support path accuracy and timing metrics; integrated streams align with glove sensors for correlating kinematics with force. A feedback layer can trigger headset cues or corrective haptics while data logging enables replay and longitudinal assessment. Marker-based tracking establishes baseline accuracy first; later work explores markerless recognition and sensor fusion with explicit trade-offs between setup convenience and precision.
+        </p>
+
+        <h3 class="title is-4 mt-5">Haptic glove design</h3>
+        <p>
+          The glove aims for haptic feedback through twisted-string actuation (TSA), chosen for soft, biomimetic compliance. TSAs must balance motor speed and torque; a continuously variable transmission (CVT) is planned to adjust the torque ratio continuously so the glove can maintain favorable speed–torque operating points during training tasks.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="gap">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths content has-text-justified">
+        <h2 class="title is-3 has-text-centered">Gap in existing solutions</h2>
+        <ul>
+          <li>Lack of integrated AR plus full-hand haptics systems</li>
+          <li>Limited performance evaluation and feedback within training systems</li>
+          <li>Lack of realistic digital hands for trainees to follow in the environment</li>
+          <li>Insufficient realism when combining soft tissue deformation with force interaction</li>
+        </ul>
+        <p>
+          <strong>Our approach:</strong> a closed-loop AR and haptic glove system that bridges this gap using joint-angle sensing, ROS-mediated haptic command mapping, and Unity AR rendering to deliver immersive, haptic-reinforced surgical training.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section has-background-light" id="next-steps">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths content has-text-justified">
+        <h2 class="title is-3 has-text-centered">Next steps</h2>
+        <ul>
+          <li>Improve realism of haptic feedback to better mimic soft tissue behavior</li>
+          <li>Reduce end-to-end latency for smoother real-time interaction</li>
+          <li>Expand AR scenarios toward fuller surgical procedures</li>
+          <li>Integrate more advanced tracking and sensor fusion</li>
+          <li>Conduct user studies on training outcomes and usability</li>
+          <li>Move toward a more portable and scalable system design</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="references">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths content has-text-justified">
+        <h2 class="title is-3 has-text-centered">References</h2>
+        <p>
+          S. Mitani et al., &ldquo;Augmented reality-enhanced cadaver surgical training for head and neck surgeons: a proof-of-concept study,&rdquo; <em>Global Surgical Education - Journal of the Association for Surgical Education</em>, vol.&nbsp;5, no.&nbsp;1, Dec.&nbsp;2025.
+          <a href="https://doi.org/10.1007/s44186-025-00420-3">https://doi.org/10.1007/s44186-025-00420-3</a>
+        </p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -457,28 +254,18 @@
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
+      <a class="icon-link" href="./POSTER.pdf" title="Poster PDF">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-        <i class="fab fa-github"></i>
+      <a class="icon-link" href="./Project%20Proposal.pdf" title="Project proposal PDF">
+        <i class="fas fa-file-alt"></i>
       </a>
     </div>
     <div class="columns is-centered">
       <div class="column is-8">
-        <div class="content">
+        <div class="content has-text-centered">
           <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
+            Page layout adapted from the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies project page template</a> (CC&nbsp;BY-SA&nbsp;4.0). REWIND content © project team; template remains under its original license.
           </p>
         </div>
       </div>

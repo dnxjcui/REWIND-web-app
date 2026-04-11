@@ -110,22 +110,31 @@ body {
 .publication-body img {
 }
 
-.results-carousel {
-  overflow: hidden;
-}
-
-.results-carousel .item {
-  margin: 5px;
-  overflow: hidden;
-  border: 1px solid #bbb;
+.rewind-demo-placeholder {
   border-radius: 10px;
-  padding: 0;
-  font-size: 0;
+  overflow: hidden;
 }
 
-.results-carousel video {
-  margin: 0;
+.rewind-teaser-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
 }
+
+.rewind-carousel-figure {
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.rewind-carousel-figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+  vertical-align: middle;
+}
+
 
 
 .interpolation-panel {
