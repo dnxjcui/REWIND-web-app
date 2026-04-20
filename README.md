@@ -8,7 +8,7 @@
 
 Project materials in this repository:
 
-- [`poster.png`](poster.png) — project poster (hero and demo sections)  
+- [`poster.png`](poster.png) — project poster (teaser hero)  
 - [`POSTER.pdf`](POSTER.pdf) — poster PDF  
 - [`Project Proposal.pdf`](Project%20Proposal.pdf) — senior design proposal  
 

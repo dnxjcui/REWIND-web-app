@@ -110,11 +110,6 @@ body {
 .publication-body img {
 }
 
-.rewind-demo-placeholder {
-  border-radius: 10px;
-  overflow: hidden;
-}
-
 .rewind-teaser-img {
   max-width: 100%;
   height: auto;
@@ -122,19 +117,6 @@ body {
   display: block;
   margin: 0 auto;
 }
-
-.rewind-carousel-figure {
-  margin: 0 auto;
-  max-width: 100%;
-}
-
-.rewind-carousel-figure img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px 10px 0 0;
-  vertical-align: middle;
-}
-
 
 
 .interpolation-panel {
