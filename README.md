@@ -8,7 +8,8 @@
 
 Project materials in this repository:
 
-- [`POSTER.pdf`](POSTER.pdf) — in-progress poster  
+- [`poster.png`](poster.png) — project poster (hero and demo sections)  
+- [`POSTER.pdf`](POSTER.pdf) — poster PDF  
 - [`Project Proposal.pdf`](Project%20Proposal.pdf) — senior design proposal  
 
 ## Deploying on Vercel
@@ -22,10 +23,6 @@ This site is **static** (no `package.json`, no build step). In the Vercel new-pr
 5. **Install Command:** leave **empty**.
 
 Vercel will serve `index.html` at `/` and static assets under `/static/...`. No `vercel.json` is required unless you later add redirects, headers, or rewrites.
-
-## Hero and carousel media
-
-The teaser and carousel use [`static/images/rewind-poster.svg`](static/images/rewind-poster.svg) as a **placeholder**. For a sharper hero image, export a PNG from `POSTER.pdf` and replace or supplement that asset, then update the `src` attributes in `index.html` if the filename changes.
 
 ## Website license
 
